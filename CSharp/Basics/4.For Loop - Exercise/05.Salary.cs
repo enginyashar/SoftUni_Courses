@@ -1,0 +1,38 @@
+﻿using System;
+
+class Salary
+{
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int salary = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= n; i++)
+        {
+            string nameSite = Console.ReadLine();
+
+            if (nameSite == "Facebook")
+            {
+                salary -= 150;
+            }
+            else if (nameSite == "Instagram")
+            {
+                salary -= 100;
+            }
+            else if (nameSite == "Reddit")
+            {
+                salary -= 50;
+            }
+
+            if (salary <= 0)
+            {
+                Console.WriteLine("You have lost your salary.");
+                break;
+            }
+            else if (i == n)
+            {
+                Console.WriteLine(salary);
+            }
+        }
+    }
+}
